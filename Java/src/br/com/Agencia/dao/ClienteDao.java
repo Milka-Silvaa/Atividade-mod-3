@@ -1,15 +1,19 @@
 package br.com.Agencia.dao;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.mysql.cj.protocol.x.SyncFlushDeflaterOutputStream;
 
 import agencia.Cliente;
 import conector.Conection;
 
 
 public class ClienteDao {
+
+
+
+
 
 	public void save(Cliente cliente) {
 
@@ -53,4 +57,8 @@ public class ClienteDao {
 		}
 
 	}
+
+
+
+
 }
