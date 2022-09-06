@@ -32,7 +32,7 @@ public class PassagemCrud {
 			case 1: 
 				System.out.println("**************CONSULTAR PROMOÇOES***************");
 				CodigoPassagem = p.nextInt();
-				
+				System.out.println("");
 
 			break;
 			// READ

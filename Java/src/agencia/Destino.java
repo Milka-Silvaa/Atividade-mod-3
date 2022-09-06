@@ -5,8 +5,8 @@ import java.util.List;
 public class Destino {
 
 public double codigo_Destino;
-public String cidade;
 public String estado;
+public String cidade;
 
 	// Construtores
 	public Destino() {}
@@ -26,13 +26,6 @@ public String estado;
 	public void setcodigo_Destino( double codigo_Destino) {
    this.codigo_Destino = codigo_Destino; 
    }
-
-public String getcidade() {
-	return cidade;
-	}
-	public void setcidade( String cidade) {
-this.cidade = cidade;
-	}
 	
 	public String getestado() {
 		return estado;
@@ -40,12 +33,17 @@ this.cidade = cidade;
 		public void setestado( String estado) {
 	this.estado = estado;
 		}
-
+		public String getcidade() {
+			return cidade;
+			}
+			public void setcidade( String cidade) {
+		this.cidade = cidade;
+			}
 	//ToString
 		
 		@Override
 		public String toString() {
-			return "Destino [codigo_Destino=" + codigo_Destino + ", cidade=" + cidade + ", estado=" + estado +  "]";
+			return "Destino [codigo_Destino=" + codigo_Destino + ", estado=" + estado + ", cidade=" + cidade +  "]";
 		}
 
 

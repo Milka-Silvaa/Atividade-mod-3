@@ -1,58 +1,54 @@
 package agencia;
 
+import java.sql.Date;
+
 public class Passagem {
-	public int data;
-	private int CodigoPassagem;
-	public double promoçao;
-	public double valorViagem;
-	public int codigo_Destino;
+	
+	private int codigo_Passagem;
+	public double Promoção;
+	public double Valor_Viagem;
+	public int Codigo_Destino;
 	public int cpf;
+	
 	
 	// construtores
 	public Passagem () {}
 	
-	public Passagem(int data, int CodigoPassagem, double promoçao, double valorViagem,int codigo_Destino, int cpf) {
+	public Passagem( int codigo_Passagem, double Promoção, double Valor_Viagem,int Codigo_Destino, int cpf) {
 		super();
-		this.data = data;
-		this.CodigoPassagem = CodigoPassagem;
-		this.promoçao = promoçao;
-		this.valorViagem = valorViagem;
-		this.codigo_Destino = codigo_Destino;
+		this.codigo_Passagem = codigo_Passagem;
+		this.Promoção = Promoção;
+		this.Valor_Viagem = Valor_Viagem;
+		this.Codigo_Destino = Codigo_Destino;
 		this.cpf = cpf;
 	}
 
 
 	// Getteres e Seterss
 	
-	public int getdata() {
-		return data;
+	public int getcodigo_Passagem() {
+		return codigo_Passagem;
 	}
-	public void setData(int data) {
-		this.data = data;
+	public void setcodigo_Passagem(int codigo_Passagem) {
+		this.codigo_Passagem = codigo_Passagem;
 	}
-	public int getCodigoPassagem() {
-		return CodigoPassagem;
+	public double getPromoção() {
+		return Promoção;
 	}
-	public void setCodigoPassagem(int codigoPassagem) {
-		this.CodigoPassagem = codigoPassagem;
+	public void setPromoção(double Promoção) {
+		this.Promoção = Promoção;
 	}
-	public double getPromoçao() {
-		return promoçao;
+	public double getValor_Viagem() {
+		return Valor_Viagem;
 	}
-	public void setPromoçao(double promoçao) {
-		this.promoçao = promoçao;
+	public void setValor_Viagem(double Valor_Viagem) {
+		this.Valor_Viagem = Valor_Viagem;
 	}
-	public double getValorViagem() {
-		return valorViagem;
+	public int getCodigo_Destino() {
+		return Codigo_Destino;
 	}
-	public void setValorViagem(double valorViagem) {
-		this.valorViagem = valorViagem;
-	}
-	public int getcodigoDestino() {
-		return codigo_Destino;
-	}
-		public void setcodigoDestino (int codigo_Destino) {
-			this.codigo_Destino = codigo_Destino;
+		public void setCodigo_Destino (int Codigo_Destino) {
+			this.Codigo_Destino = Codigo_Destino;
 	}
 	public int getcpf() {
 		return cpf;
@@ -67,7 +63,7 @@ public class Passagem {
 
 	@Override
 	public String toString() {
-		return "Passagem [codigoPassagem=" + CodigoPassagem + ", promoçao=" + promoçao + ", valorViagem=" + valorViagem +", codigo_Destino="+ codigo_Destino +",cpf=" + cpf +"]";
+		return "Passagem [codigo_Passagem=" + codigo_Passagem + ", Promoção=" + Promoção + ", Valor_Viagem=" + Valor_Viagem +", Codigo_Destino="+ Codigo_Destino +",cpf=" + cpf +"]";
 	}
 	
 	

@@ -16,10 +16,10 @@ public class Conection {
 	
 	
 	//CAMINHO DO BANCO 
-	private static final String DATABASE_URL =  "jdbc:mysql://localhost:3306/temvagaa";
+	private static final String DATABASE_URL =  "jdbc:mysql://localhost:3306/TEMVAGA";
 	
 	// CLASSE CARREGADA PELO JVM
-	public static Connection createConectionToSQL() throws Exception {
+	public static Connection createConectionToMySQL1() throws Exception {
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	
 	// CRIANDO A CONEXAO BANCO 
@@ -30,12 +30,18 @@ public class Conection {
 
 	public static void main(String[] args) throws Exception {	
 		
-		Connection con = createConectionToSQL();
+		Connection con = createConectionToMySQL1();
 		// testar se a conexão é nula
 		
 		if(con != null) {
 			System.out.println("conexão obtida com sucesso");
 			con.close();
+			
 }
 }
+
+	public static Connection createConectionToMySQL() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

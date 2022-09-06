@@ -1,5 +1,4 @@
 package br.com.Agencia.dao;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import agencia.Passagem;
@@ -8,34 +7,35 @@ import conector.Conection;
 
 public class PassagemDao {
 
-	public void save (Passagem passagem) {
-		String sql = "INSERT INTO passagem(data,CodigoPassagem,promoçao,valorViagem,codigoDestino,cpf) VALUES (?,?,?,?)"; 
-		Connection conn = null;
-		PreparedStatement pstm = null;
-		
-		try {
-			conn = Conection.createConectionToSQL();
-			
-			pstm = (PreparedStatement) conn.prepareStatement(sql);
-			pstm.setDouble(1, passagem.getdata());
-			pstm.setInt(2, passagem.getCodigoPassagem());
-			pstm.setDouble(3,passagem.getPromoçao());
-			pstm.setDouble(4,passagem.getValorViagem());
-			pstm.setDouble(5,passagem.getcodigoDestino());
-			pstm.setDouble(6,passagem.getcpf());
-			pstm.execute();
-		}
-			
-			catch (Exception e) {
-				e.printStackTrace();
-			} finally {
+public void save (Passagem passagem) {
+String sql = "INSERT INTO passagem(Codigo_Passagem,Promoção,Valor_Viagem,Codigo_Destino,cpf) VALUES (?,?,?,?,?)"; 
+Connection conn = null;
+PreparedStatement pstm = null;
+try {
+conn = Conection.createConectionToMySQL1();
+pstm = (PreparedStatement) conn.prepareStatement(sql);
+pstm.setInt(1, passagem.getcodigo_Passagem());
+pstm.setDouble(2, passagem.getPromoção());
+pstm.setDouble(3, passagem.getValor_Viagem());
+pstm.setInt(4, passagem.getCodigo_Destino());
+pstm.setInt(5, passagem.getcpf());
+pstm.execute();
+System.out.println("contato salvo com sucesso");
+}
+catch (Exception e) {
+e.printStackTrace();
+} finally {
+try {
+if (pstm != null) {
+pstm.close();
+}
 
-				try {
-					if (pstm != null) {
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-		}
-			}
-	}
+if (conn!=null) {
+	conn.close();
+}
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+}
 }

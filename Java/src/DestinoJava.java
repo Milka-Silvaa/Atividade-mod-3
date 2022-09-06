@@ -9,7 +9,7 @@ public class DestinoJava {
 	
 	{
 		DestinoDao destinodao = new DestinoDao();
-		Destino d1 = new Destino (8765432,"Lagoa Azul", "Maranhão");
+		Destino d1 = new Destino (23452168,"PERNAMBUCO", "PRAIA PORTO DE GALINHAS");
 		destinodao.save(d1);
 		
 		System.out.println("Codigo_Destino: " + d1.getcodigo_Destino());

@@ -15,7 +15,7 @@ public class DestinoDao {
 		PreparedStatement pstm = null;
 		
 		try {
-			conn = Conection.createConectionToSQL();
+			conn = Conection.createConectionToMySQL1();
 			
 			pstm = (PreparedStatement) conn.prepareStatement(sql);
 			pstm.setDouble(1, destino.getcodigo_Destino());
@@ -30,6 +30,7 @@ public class DestinoDao {
 
 				try {
 					if (pstm != null) {
+						pstm.close();
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
