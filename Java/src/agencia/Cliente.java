@@ -45,6 +45,11 @@ public class Cliente{
 	
 	//ToString
 	
+public Cliente() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 @Override
 public String toString() {
 	return "Cliente{nome=" + nome + ", cpf=" + cpf + ", telefone=" + telefone + ", email=" + email + ", idade=" + idade

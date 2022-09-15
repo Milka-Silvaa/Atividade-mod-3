@@ -43,7 +43,8 @@ public class DestinoCrud {
 			// READ
 			case 2:
 				System.out.println("CONSULTAR DESTINO");
-				System.out.println(" Pernambuco \n, Bahia \n, Rio grande do Norte");
+				System.out.println(" Pernambuco \n Bahia \n Rio grande do Norte \n Fortaleza \n Paraiba \n Alagoas \n Sergipe \n Piauí \n Maranhão  ");
+				
 			break;
 				// UPDATE	
 			case 3:

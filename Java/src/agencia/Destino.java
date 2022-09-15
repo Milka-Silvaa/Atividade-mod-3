@@ -23,6 +23,7 @@ public String cidade;
 	public double getcodigo_Destino() {
 		return codigo_Destino;
 		}
+	
 	public void setcodigo_Destino( double codigo_Destino) {
    this.codigo_Destino = codigo_Destino; 
    }
